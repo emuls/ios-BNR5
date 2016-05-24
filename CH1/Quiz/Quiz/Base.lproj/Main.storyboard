@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbg-7Y-GPh">
+                                <rect key="frame" x="288" y="28" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-6r-Ppw">
+                                <rect key="frame" x="288" y="289" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCq-y4-04v">
+                                <rect key="frame" x="251" y="49" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rda-bH-MOp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9K-s1-Tm0">
+                                <rect key="frame" x="254" y="318" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showNextAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1TT-Gc-XS7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m9K-s1-Tm0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0by-b0-4NO"/>
+                            <constraint firstItem="m9K-s1-Tm0" firstAttribute="top" secondItem="i8J-6r-Ppw" secondAttribute="bottom" constant="8" id="41v-96-2Mg"/>
+                            <constraint firstItem="HCq-y4-04v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EkB-zm-BLN"/>
+                            <constraint firstItem="i8J-6r-Ppw" firstAttribute="top" secondItem="HCq-y4-04v" secondAttribute="bottom" constant="210" id="JHa-Ru-OAt"/>
+                            <constraint firstItem="mbg-7Y-GPh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TqD-H2-N2Y"/>
+                            <constraint firstItem="i8J-6r-Ppw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bRr-f4-0CA"/>
+                            <constraint firstItem="HCq-y4-04v" firstAttribute="top" secondItem="mbg-7Y-GPh" secondAttribute="bottom" id="qMV-zQ-pZv"/>
+                            <constraint firstItem="mbg-7Y-GPh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ul2-z2-XKY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerButton" destination="m9K-s1-Tm0" id="Frp-B2-j2Z"/>
+                        <outlet property="answerLabel" destination="i8J-6r-Ppw" id="Ift-EQ-rtJ"/>
+                        <outlet property="questionButton" destination="HCq-y4-04v" id="Sp8-8w-SuI"/>
+                        <outlet property="questionLabel" destination="mbg-7Y-GPh" id="ZMA-eg-OWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
